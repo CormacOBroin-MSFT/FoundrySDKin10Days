@@ -26,35 +26,35 @@ Difficulty scale: 0 to 9 (inclusive).
 
 Interpret the difficulty as follows:
 
-0 = Getting Started  
-    (basic variables, printing, very simple string handling)
+0 = Level 0 — Generate and Display a Fantasy Creature Description using Microsoft Foundry SDK  
+    (Call Foundry to generate a short creature description and print it cleanly to the console.)
 
-1 = Basic Input and Output  
-    (variables, conditionals, simple loops)
+1 = Level 1 — Create and Filter a Dungeons & Dragons Character Sheet using Microsoft Foundry SDK  
+    (Generate a simple character profile and filter out specific attributes before displaying it.)
 
-2 = Working with Lists and Strings  
-    (lists, simple dictionaries, string splitting and counting)
+2 = Level 2 — Generate Short Movie Reviews and Count Positive Words using Microsoft Foundry SDK  
+    (Request multiple short reviews and count how often positive words appear.)
 
-3 = Functions and Organization  
-    (writing simple functions, basic validation, structured logic)
+3 = Level 3 — Build a Simple Joke Collector and Validator using Microsoft Foundry SDK  
+    (Generate several jokes, discard ones that exceed a length limit, and organize the rest.)
 
-4 = File Handling and Structured Data  
-    (basic file I/O, working with JSON-like structures, simple aggregation)
+4 = Level 4 — Generate Study Flashcards and Save Them to a File using Microsoft Foundry SDK  
+    (Create structured Q&A pairs and write them to disk after validating format.)
 
-5 = Multi-Step Processing  
-    (combining functions, filtering data, transforming structured responses)
+5 = Level 5 — Create and Analyze AI-Generated Product Feedback Reports using Microsoft Foundry SDK  
+    (Generate structured feedback entries and compute summary statistics.)
 
-6 = Intermediate Data Handling  
-    (modular design, structured data manipulation, error handling)
+6 = Level 6 — Generate Daily Weather Summaries and Aggregate Temperature Insights using Microsoft Foundry SDK  
+    (Request multiple structured weather summaries and compute averages or trends.)
 
-7 = Coordinated SDK Usage  
-    (multiple SDK calls, aggregation, response validation)
+7 = Level 7 — Simulate a News Headline Monitoring System using Microsoft Foundry SDK  
+    (Make multiple SDK calls for headlines, validate structure, aggregate keyword trends.)
 
-8 = Reusable Components and Flow Control  
-    (abstractions, chaining calls, state management)
+8 = Level 8 — Build a Multi-Stage Story Generator with Structured Scene Validation using Microsoft Foundry SDK  
+    (Chain multiple SDK calls to generate story parts, validate format, and maintain state.)
 
-9 = Advanced Logic and Robustness  
-    (retry logic, structured pipelines, careful validation, clean architecture)
+9 = Level 9 — Design a Structured AI Report Processing Pipeline using Microsoft Foundry SDK  
+    (Generate structured multi-section reports, validate schema, retry on invalid responses, and produce a cleaned final output.)
 
 Timebox (MUST be quick):
 - Difficulty 0–5: 8–12 minutes
@@ -90,7 +90,7 @@ Generate exactly ONE exercise. Do not generate multiple options.
 )
     with open("exercises/exercises/exercise"+""+str(i)+".txt", "w") as f:
           f.write(response.output_text)
-    print("Exercise " + str(i) + " Generated. Sleeping for 20 seconds to avoid rate limits...")
-    time.sleep(20)
+    print("Exercise " + str(i) + " Generated. Sleeping for 30 seconds to avoid rate limits...")
+    time.sleep(30)
 
   
