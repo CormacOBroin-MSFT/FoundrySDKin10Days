@@ -1,0 +1,29 @@
+TITLE
+Weather Data Aggregator Using Microsoft Foundry SDK
+
+OBJECTIVE
+Write a Python script that uses the Microsoft Foundry SDK to fetch weather data for a specific location and aggregates the temperatures over a week to find the average temperature.
+
+PROGRAMMING CONCEPTS PRACTICED
+- Basic variables
+- Loops
+- Conditionals
+- Simple lists
+- Basic string handling
+- API call using SDK
+- Data aggregation
+
+REQUIREMENTS
+- Use the Microsoft Foundry SDK to fetch daily weather data for a specific location for the past 7 days.
+- Extract temperature data from the SDK response.
+- Store the extracted temperature data in a list.
+- Calculate the average temperature over the 7 days.
+- Print the average temperature.
+
+EXPECTED BEHAVIOR
+- The script fetches weather data for the past 7 days.
+- The script extracts and aggregates temperature data.
+- The script calculates and prints the average temperature.
+
+DIFFICULTY RATING (0-9)
+2
