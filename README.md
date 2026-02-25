@@ -1,10 +1,27 @@
-# Foundry SDK Exercise Generator
+# Foundry SDK in 10 Days
 
 A simple project that uses the Azure AI Foundry SDK to generate 10 programming exercises of increasing difficulty. Complete them all at once, or tackle one a day as a **10-day challenge**.
 
 ## What It Does
 
-`app.py` calls the Foundry SDK to generate 10 coding exercises (difficulty 0–9) and saves each one to `exercises/exercises/`. Each exercise requires you to write Python code that uses the Foundry SDK as a tool within the solution.
+`app.py` calls the Foundry SDK (via `gpt-4o`) to generate 10 themed coding exercises (difficulty 0–9) and saves each one to `exercises/exercises/`. Each exercise requires you to write Python code that uses the Foundry SDK as a tool within the solution.
+
+The exercises follow a fun progression:
+
+| Level | Theme |
+|-------|-------|
+| 0 | Generate and display a fantasy creature description |
+| 1 | Create and filter a D&D character sheet |
+| 2 | Generate movie reviews and count positive words |
+| 3 | Build a joke collector and validator |
+| 4 | Generate study flashcards and save to file |
+| 5 | Create and analyze AI-generated product feedback |
+| 6 | Generate weather summaries and aggregate insights |
+| 7 | Simulate a news headline monitoring system |
+| 8 | Build a multi-stage story generator with validation |
+| 9 | Design a structured AI report processing pipeline |
+
+Estimated time per exercise: 8–25 minutes depending on difficulty.
 
 ## Prerequisites
 
@@ -31,17 +48,21 @@ A simple project that uses the Azure AI Foundry SDK to generate 10 programming e
 3. **Install dependencies**
 
    ```bash
-   pip install azure-ai-projects azure-identity openai
+   pip install -r requirements.txt
    ```
 
-4. **Update the endpoint**
+4. **Configure your endpoint**
 
-   Open `app.py` and replace the `endpoint` value with your own Azure AI Foundry project endpoint:
+   Copy the sample env file and fill in your Azure AI Foundry project endpoint:
 
-   ```python
-   project_client = AIProjectClient(
-       endpoint="https://<your-resource>.services.ai.azure.com/api/projects/<your-project>",
-       credential=DefaultAzureCredential())
+   ```bash
+   cp .env_sample .env
+   ```
+
+   Edit `.env`:
+
+   ```
+   PROJECT_ENDPOINT="https://<your-resource>.services.ai.azure.com/api/projects/<your-project>"
    ```
 
 5. **Log in to Azure**
@@ -56,7 +77,7 @@ A simple project that uses the Azure AI Foundry SDK to generate 10 programming e
 python app.py
 ```
 
-This will generate 10 exercise files (`exercise0.txt` – `exercise9.txt`) in the `exercises/exercises/` directory. There is a 20-second delay between each to avoid rate limiting.
+This will generate 10 exercise files (`exercise0.txt` – `exercise9.txt`) in the `exercises/exercises/` directory. There is a 30-second delay between each to avoid rate limiting (~5 minutes total).
 
 ## Complete the Exercises
 
@@ -70,7 +91,9 @@ Each exercise asks you to write a Python script that uses the Foundry SDK. Put y
 
 ```
 ├── app.py                          # Exercise generator script
-├── requirements.txt
+├── requirements.txt                # Python dependencies
+├── .env_sample                     # Sample environment config
+├── .env                            # Your endpoint (git-ignored)
 ├── .gitignore
 ├── README.md
 └── exercises/
