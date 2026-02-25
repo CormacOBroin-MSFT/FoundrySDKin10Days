@@ -21,10 +21,36 @@ Difficulty level: """ + str(i) + """
 Difficulty scale: 0 to 9 (inclusive).
 
 Interpret the difficulty as follows:
-0–2 = Intro / very beginner (basic variables, loops, conditionals, simple lists/dicts, basic string handling)
-3–5 = Beginner (functions, basic file I/O, simple data structures, basic validation)
-6–7 = Intermediate (modular design, structured data manipulation, error handling, aggregation, multiple SDK calls)
-8–9 = Advanced (abstractions, reusable components, chaining calls, state management, response validation, retry logic)
+
+0 = Getting Started  
+    (basic variables, printing, very simple string handling)
+
+1 = Basic Input and Output  
+    (variables, conditionals, simple loops)
+
+2 = Working with Lists and Strings  
+    (lists, simple dictionaries, string splitting and counting)
+
+3 = Functions and Organization  
+    (writing simple functions, basic validation, structured logic)
+
+4 = File Handling and Structured Data  
+    (basic file I/O, working with JSON-like structures, simple aggregation)
+
+5 = Multi-Step Processing  
+    (combining functions, filtering data, transforming structured responses)
+
+6 = Intermediate Data Handling  
+    (modular design, structured data manipulation, error handling)
+
+7 = Coordinated SDK Usage  
+    (multiple SDK calls, aggregation, response validation)
+
+8 = Reusable Components and Flow Control  
+    (abstractions, chaining calls, state management)
+
+9 = Advanced Logic and Robustness  
+    (retry logic, structured pipelines, careful validation, clean architecture)
 
 Timebox (MUST be quick):
 - Difficulty 0–5: 8–12 minutes
