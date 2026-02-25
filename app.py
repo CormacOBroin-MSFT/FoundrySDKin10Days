@@ -1,9 +1,13 @@
+import os
 import time
 from azure.identity import DefaultAzureCredential
 from azure.ai.projects import AIProjectClient
+from dotenv import load_dotenv
+
+load_dotenv()
 
 project_client = AIProjectClient(
-  endpoint="YOUR_PROJECT_ENDPOINT",
+  endpoint=os.getenv("PROJECT_ENDPOINT"),
   credential=DefaultAzureCredential())
 
 with project_client.get_openai_client() as openai_client:
