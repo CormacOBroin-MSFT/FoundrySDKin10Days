@@ -1,2 +1,3 @@
 venv/
-exercises/
+exercises/exercises/*
+exercises/exerciseAnswers/*
